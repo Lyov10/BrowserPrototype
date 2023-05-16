@@ -9,23 +9,31 @@
 /* Begin PBXBuildFile section */
 		C6D8C03B2A135F59000648B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D8C03A2A135F59000648B6 /* AppDelegate.swift */; };
 		C6D8C03D2A135F59000648B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D8C03C2A135F59000648B6 /* SceneDelegate.swift */; };
-		C6D8C03F2A135F59000648B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D8C03E2A135F59000648B6 /* ViewController.swift */; };
 		C6D8C0422A135F59000648B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6D8C0402A135F59000648B6 /* Main.storyboard */; };
 		C6D8C0452A135F59000648B6 /* BrowserPrototype.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C6D8C0432A135F59000648B6 /* BrowserPrototype.xcdatamodeld */; };
 		C6D8C0472A135F5A000648B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6D8C0462A135F5A000648B6 /* Assets.xcassets */; };
 		C6D8C04A2A135F5A000648B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6D8C0482A135F5A000648B6 /* LaunchScreen.storyboard */; };
+		C6D8C0522A1366A8000648B6 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D8C0512A1366A8000648B6 /* HistoryViewController.swift */; };
+		C6D8C0572A136743000648B6 /* BrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D8C0562A136743000648B6 /* BrowserViewController.swift */; };
+		C6D8C05B2A136864000648B6 /* LocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D8C05A2A136864000648B6 /* LocalDataManager.swift */; };
+		C6D8C0672A138E56000648B6 /* UrlTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D8C0652A138E56000648B6 /* UrlTableViewCell.swift */; };
+		C6D8C0682A138E56000648B6 /* UrlTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6D8C0662A138E56000648B6 /* UrlTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C6D8C0372A135F59000648B6 /* BrowserPrototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrowserPrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6D8C03A2A135F59000648B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6D8C03C2A135F59000648B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C6D8C03E2A135F59000648B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C6D8C0412A135F59000648B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C6D8C0442A135F59000648B6 /* BrowserPrototype.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BrowserPrototype.xcdatamodel; sourceTree = "<group>"; };
 		C6D8C0462A135F5A000648B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6D8C0492A135F5A000648B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6D8C04B2A135F5A000648B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6D8C0512A1366A8000648B6 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		C6D8C0562A136743000648B6 /* BrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserViewController.swift; sourceTree = "<group>"; };
+		C6D8C05A2A136864000648B6 /* LocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataManager.swift; sourceTree = "<group>"; };
+		C6D8C0652A138E56000648B6 /* UrlTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlTableViewCell.swift; sourceTree = "<group>"; };
+		C6D8C0662A138E56000648B6 /* UrlTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UrlTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +66,68 @@
 		C6D8C0392A135F59000648B6 /* BrowserPrototype */ = {
 			isa = PBXGroup;
 			children = (
-				C6D8C03A2A135F59000648B6 /* AppDelegate.swift */,
-				C6D8C03C2A135F59000648B6 /* SceneDelegate.swift */,
-				C6D8C03E2A135F59000648B6 /* ViewController.swift */,
-				C6D8C0402A135F59000648B6 /* Main.storyboard */,
-				C6D8C0462A135F5A000648B6 /* Assets.xcassets */,
-				C6D8C0482A135F5A000648B6 /* LaunchScreen.storyboard */,
+				C6D8C0592A136833000648B6 /* LocalDataBase */,
+				C6D8C0582A136823000648B6 /* SupportingFiles */,
+				C6D8C0532A136706000648B6 /* ViewControllers */,
+				C6D8C0542A13671D000648B6 /* Storyboards */,
+				C6D8C0552A13672B000648B6 /* Resources */,
 				C6D8C04B2A135F5A000648B6 /* Info.plist */,
-				C6D8C0432A135F59000648B6 /* BrowserPrototype.xcdatamodeld */,
 			);
 			path = BrowserPrototype;
+			sourceTree = "<group>";
+		};
+		C6D8C0532A136706000648B6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C6D8C0512A1366A8000648B6 /* HistoryViewController.swift */,
+				C6D8C0562A136743000648B6 /* BrowserViewController.swift */,
+				C6D8C0642A137DE8000648B6 /* URLTableViewCell */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C6D8C0542A13671D000648B6 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C6D8C0402A135F59000648B6 /* Main.storyboard */,
+				C6D8C0482A135F5A000648B6 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		C6D8C0552A13672B000648B6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C6D8C0462A135F5A000648B6 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C6D8C0582A136823000648B6 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C6D8C03A2A135F59000648B6 /* AppDelegate.swift */,
+				C6D8C03C2A135F59000648B6 /* SceneDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		C6D8C0592A136833000648B6 /* LocalDataBase */ = {
+			isa = PBXGroup;
+			children = (
+				C6D8C0432A135F59000648B6 /* BrowserPrototype.xcdatamodeld */,
+				C6D8C05A2A136864000648B6 /* LocalDataManager.swift */,
+			);
+			path = LocalDataBase;
+			sourceTree = "<group>";
+		};
+		C6D8C0642A137DE8000648B6 /* URLTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C6D8C0652A138E56000648B6 /* UrlTableViewCell.swift */,
+				C6D8C0662A138E56000648B6 /* UrlTableViewCell.xib */,
+			);
+			path = URLTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +191,7 @@
 				C6D8C04A2A135F5A000648B6 /* LaunchScreen.storyboard in Resources */,
 				C6D8C0472A135F5A000648B6 /* Assets.xcassets in Resources */,
 				C6D8C0422A135F59000648B6 /* Main.storyboard in Resources */,
+				C6D8C0682A138E56000648B6 /* UrlTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,10 +202,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6D8C03F2A135F59000648B6 /* ViewController.swift in Sources */,
+				C6D8C0572A136743000648B6 /* BrowserViewController.swift in Sources */,
 				C6D8C03B2A135F59000648B6 /* AppDelegate.swift in Sources */,
 				C6D8C03D2A135F59000648B6 /* SceneDelegate.swift in Sources */,
+				C6D8C0522A1366A8000648B6 /* HistoryViewController.swift in Sources */,
+				C6D8C0672A138E56000648B6 /* UrlTableViewCell.swift in Sources */,
 				C6D8C0452A135F59000648B6 /* BrowserPrototype.xcdatamodeld in Sources */,
+				C6D8C05B2A136864000648B6 /* LocalDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ejq-VA-p6Z">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Browser-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="BrowserViewController" customModule="BrowserPrototype" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hI7-70-wEx">
+                                <rect key="frame" x="16" y="103" width="361" height="40"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9xn-AO-wod">
+                                        <rect key="frame" x="0.0" y="0.0" width="311" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="go"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="zog-Rn-09D"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBa-hw-G8Q">
+                                        <rect key="frame" x="321" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="mBa-hw-G8Q" secondAttribute="height" id="EdZ-ku-4L3"/>
+                                            <constraint firstAttribute="height" constant="40" id="ZeJ-zV-yHr"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="book" catalog="system"/>
+                                        <connections>
+                                            <segue destination="Dwh-Jy-zJ4" kind="show" identifier="HistoryViewController" id="t5G-d8-KOC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jR7-y8-Z59">
+                                <rect key="frame" x="0.0" y="153" width="393" height="649"/>
+                                <color key="backgroundColor" red="0.36078431372549019" green="0.38823529411764707" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hI7-70-wEx" secondAttribute="trailing" constant="16" id="1VH-dr-XKo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jR7-y8-Z59" secondAttribute="bottom" constant="16" id="9HA-pQ-jOF"/>
+                            <constraint firstItem="jR7-y8-Z59" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CB9-yK-nZA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jR7-y8-Z59" secondAttribute="trailing" id="Nkm-1Q-g27"/>
+                            <constraint firstItem="hI7-70-wEx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="PSt-kk-CUI"/>
+                            <constraint firstItem="hI7-70-wEx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UnF-fw-yJ5"/>
+                            <constraint firstItem="jR7-y8-Z59" firstAttribute="top" secondItem="hI7-70-wEx" secondAttribute="bottom" constant="10" id="l7W-Us-3Cv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Browser" id="mnj-RQ-ORY"/>
+                    <connections>
+                        <outlet property="urlTextField" destination="9xn-AO-wod" id="958-29-DPY"/>
+                        <outlet property="webView" destination="jR7-y8-Z59" id="DRV-ks-dLU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1055.7251908396945" y="-2.1126760563380285"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="Wdb-Yz-ipe">
+            <objects>
+                <viewController id="Dwh-Jy-zJ4" customClass="HistoryViewController" customModule="BrowserPrototype" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MYq-DO-s5u">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RF1-eT-BkE">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Dwh-Jy-zJ4" id="uqw-u0-Bpn"/>
+                                    <outlet property="delegate" destination="Dwh-Jy-zJ4" id="kUh-My-wlG"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FL2-KJ-ELV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FL2-KJ-ELV" firstAttribute="bottom" secondItem="RF1-eT-BkE" secondAttribute="bottom" id="8Ep-80-2pu"/>
+                            <constraint firstItem="FL2-KJ-ELV" firstAttribute="trailing" secondItem="RF1-eT-BkE" secondAttribute="trailing" id="MVY-a7-oGi"/>
+                            <constraint firstItem="RF1-eT-BkE" firstAttribute="top" secondItem="FL2-KJ-ELV" secondAttribute="top" id="iRR-su-cDz"/>
+                            <constraint firstItem="RF1-eT-BkE" firstAttribute="leading" secondItem="FL2-KJ-ELV" secondAttribute="leading" id="o9Y-vb-MaG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="History" id="e8q-gx-Ybb"/>
+                    <connections>
+                        <outlet property="tableView" destination="RF1-eT-BkE" id="xtU-Ea-tbo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ga-Yk-cg5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1912.2137404580151" y="-2.1126760563380285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uK0-Kr-COf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ejq-VA-p6Z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zqt-dB-jKP">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="oKV-Ir-sKl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="baZ-GN-VQa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129.00763358778624" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="book" catalog="system" width="128" height="99"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
